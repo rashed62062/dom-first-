@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        li{
+            color: yellowgreen;
+        }
+        #fruits_title{
+            color: black;
+        }
+        #places-title{
+            color: aqua;
+        }
+        .important-places{
+            color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab quo, dicta quasi rerum voluptatibus quam ea mollitia illum! At eius sunt aliquid est. Accusantium error aperiam maxime rem repellat architecto?</p>
+    </header>
+    <main>
+      <section>
+        <h1>My awesome DOM  da ba</h1>
+   
+        <ul>
+                 <li> jalai se<li>
+                <li> shafa set </li>
+                <li>bonobast</li>
+        </ul>
+        <ul>
+            <li>apple</li>
+            <li>mango</li>
+            <li>malta</li>
+            <li>banana</li>
+        </ul>
+      </section>
+
+
+    <section>
+        <h1 id="fruits_title">Fruits I like</h1>
+        <ul>
+            <li>Apple</li>
+            <li> Banana</li>
+            <li> Cap s</li>
+            <li> dob raba </li>
+        </ul>
+    </section>
+    <section>
+        <h1 id="places-title">places i like to visit</h1>
+        <ul>
+            <li class="important-places">sudorba</li>
+            <li class="important-places">bandorbon </li>
+            <li class="important-places">katabon</li>
+            <li>shalbon</li>
+        </ul>
+    </section>
+</main>
+    <!-- js  -->
+    <script src="js/dom.js"></script>
+    <script>
+        // console.log('adding  js inside the html file');
+        // const student ={
+        //     name : 'asl',
+        //     id : 23,
+        //     study :function(time){
+        //         console.log(time,'study kortesa');
+        //     }
+        
+        // }
+
+        const licollection = document.getElementsByTagName('li');
+        // console.log(licollection);
+
+        for (const li of licollection){
+            console.log(li.innerText);
+        }
+        const allheding = document.getElementsByTagName('h1');
+        for (const h1 of allheding)
+        console.log(h1.innerText);
+
+        const fruitsTitale = document.getElementById('fruits_title');
+        fruitsTitale.innerText = 'fruits changed by js'
+    
+
+        const places = document.getElementsByClassName('important-places')
+        for(const place of places){
+            console.log(place.innerText);
+        }
+
+    </script>
+
+    
+</body>
+</html>
